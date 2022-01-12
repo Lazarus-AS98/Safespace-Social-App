@@ -1,5 +1,5 @@
 import  React, {useContext, useState}  from 'react';
-import { ScrollView,TouchableOpacity, Text,StyleSheet,Image, useColorScheme,Alert,View } from 'react-native';
+import { ScrollView,TouchableOpacity, Text,StyleSheet,Image, useColorScheme,Alert,View, Linking } from 'react-native';
 import { Button, TextInput,IconButton,Surface,HStack} from '@react-native-material/core';
 import { NavigationContainer,DefaultTheme,DarkTheme, useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -132,6 +132,7 @@ function RegistrationScreen({ navigation }) {
             //subHeader="Divider"
             //subHeaderStyle={{textAlign:'center', color:colors.on_surface }}
           />
+          
           <SocialButton
             buttonTitle="Check us out on GitHub"
             iconPack={"evilIcons"}
@@ -139,9 +140,9 @@ function RegistrationScreen({ navigation }) {
             iconsize={37}
             color="#ffffff"
             backgroundColor="#010409"
-            //onPress={() => googleLogin()}
+            onPress={() => Linking.openURL("https://github.com/Lazarus-AS98/Safespace-Social-App.git")}
           />
-        
+                  
     <TouchableOpacity
         style={styles.navButton}
         onPress={() => navigation.navigate('Login')}>
