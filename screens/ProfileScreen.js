@@ -9,7 +9,8 @@ export default function HomeScreen({ navigation }) {
     const colors = useTheme();
     return (
         <View style = {styles.container}>
-            <Text style ={{fontSize:25, color:colors.text_variant}}> HomeScreen</Text>
+            <Text style ={{fontSize:25, color:colors.text_variant}} > ProfileScreen {user.uid}</Text>
+            <FormButton buttonTitle={'Logout'} onPress={() => logout()}/>
         </View>
     );
 }
@@ -23,5 +24,4 @@ const styles = StyleSheet.create({
         alignItems:'center',
         padding:20,
     },
-    
 });

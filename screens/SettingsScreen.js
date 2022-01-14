@@ -1,27 +1,27 @@
 import React, {useContext} from 'react';
 import { StyleSheet, Text, View } from 'react-native'
-import { useTheme } from '@react-navigation/native';
 import FormButton from '../components/FormButton'
 import { AuthContext } from '../navigation/AuthProvider';
 
-export default function HomeScreen({ navigation }) {
+export default function SettingScreen({ navigation }) {
     const {user,logout} = useContext(AuthContext);
-    const colors = useTheme();
     return (
         <View style = {styles.container}>
-            <Text style ={{fontSize:25, color:colors.text_variant}}> HomeScreen</Text>
+            <Text style={styles.text}>SettingScreen</Text>
         </View>
     );
 }
-//const {colors} = useTheme();
+
 const styles = StyleSheet.create({
-    
     container:{
-        //backgroundColor: colors.background,
+        backgroundColor: '#ffffff',
         flex:1,
         justifyContent:'center',
         alignItems:'center',
         padding:20,
     },
-    
+    text:{
+        fontSize:20,
+        color:'#000000'
+    }
 });
