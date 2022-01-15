@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, StyleSheet, View } from 'react-native';
 import {NavigationContainer,DefaultTheme,DarkTheme, useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/.bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -10,6 +10,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ChatScreen from '../screens/ChatScreen';
+import NewPostScreen from '../screens/NewPostScreen';
 import { windowHeight } from '../utils/Dimentions';
 
 const Stack = createNativeStackNavigator();
@@ -75,6 +76,10 @@ function AppStack ()
         size = focused ? 35 : 25;
         iconName = focused ? 'account-details' : 'account-details-outline';
       }
+      else if(route.name ==='NewPost'){
+        size = focused ? 35 : 25;
+        iconName = focused ? 'card-plus' : 'card-plus-outline';
+      }
       return <MaterialCommunityIcons name={iconName} color={color} size={size}/>
     },
       tabBarShowLabel:false,
@@ -110,6 +115,13 @@ function AppStack ()
       <Tab.Screen
         name="Profile"
         component={ProfileStack}
+        options={{
+          headerShown:false,
+        }}
+      />
+      <Tab.Screen
+        name="NewPost"
+        component={NewPostScreen}
         options={{
           headerShown:false,
         }}
