@@ -11,6 +11,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ChatScreen from '../screens/ChatScreen';
 import NewPostScreen from '../screens/NewPostScreen';
+import MessageScreen from '../screens/MessageScreen';
 import { windowHeight } from '../utils/Dimentions';
 
 const Stack = createNativeStackNavigator();
@@ -39,14 +40,15 @@ const MyFeed = () => (
 
 const MessageStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Messages" component={ChatScreen} />
+    <Stack.Screen name="Message" component={MessageScreen} />
+    <Stack.Screen name="Chat" component={ChatScreen} />
   </Stack.Navigator>
 );
 
 const ProfileStack = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="Profile"
+      name="Profil"
       component={ProfileScreen}
       options={{
         headerShown: false,
