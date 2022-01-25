@@ -17,14 +17,46 @@ import {
 const Messages = [
     {
       id: '1',
-      userName: 'Jenny Doe',
-      userImg: require('../assets/users/user-3.jpg'),
+      userName: 'Abhishek Shrestha',
+      userImg: require('../assets/users/abhishek1.jpeg'),
       messageTime: '4 mins ago',
       messageText:
-        'Hey there, this is my test for a post of my social app in React Native.',
+        'Hey there, heard your getting a car',
     },
     {
       id: '2',
+      userName: 'Divyanshu',
+      userImg: require('../assets/users/div1.jpeg'),
+      messageTime: '2 hours ago',
+      messageText:
+        'okh..',
+    },
+    {
+      id: '3',
+      userName: 'Ujani Gupta',
+      userImg: require('../assets/users/ujani1.jpeg'),
+      messageTime: '1 hours ago',
+      messageText:
+        'got to submit it now... ',
+    },
+    {
+      id: '4',
+      userName: 'Mayank Kumar',
+      userImg: require('../assets/users/mayank1.jpeg'),
+      messageTime: '1 day ago',
+      messageText:
+        'it was awesome',
+    },
+    {
+      id: '5',
+      userName: 'Abhijeet Kumar',
+      userImg: require('../assets/users/abhi1.jpg'),
+      messageTime: '4 mins ago',
+      messageText:
+        "happy b'day",
+    },
+    {
+      id: '6',
       userName: 'John Doe',
       userImg: require('../assets/users/user-1.jpg'),
       messageTime: '2 hours ago',
@@ -32,7 +64,7 @@ const Messages = [
         'Hey there, this is my test for a post of my social app in React Native.',
     },
     {
-      id: '3',
+      id: '7',
       userName: 'Ken William',
       userImg: require('../assets/users/user-4.jpg'),
       messageTime: '1 hours ago',
@@ -40,7 +72,7 @@ const Messages = [
         'Hey there, this is my test for a post of my social app in React Native.',
     },
     {
-      id: '4',
+      id: '8',
       userName: 'Selina Paul',
       userImg: require('../assets/users/user-6.jpg'),
       messageTime: '1 day ago',
@@ -48,7 +80,7 @@ const Messages = [
         'Hey there, this is my test for a post of my social app in React Native.',
     },
     {
-      id: '5',
+      id: '9',
       userName: 'Christy Alex',
       userImg: require('../assets/users/user-7.jpg'),
       messageTime: '2 days ago',

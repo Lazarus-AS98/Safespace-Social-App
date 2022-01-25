@@ -41,7 +41,8 @@ const PostCard = ({item}) => {
         </UserInfoText>
       </UserInfo>
       <PostText>{item.post}</PostText>
-      <PostImg source={require('../assets/users/user-3.jpg')} />
+      {item.postImage != 'none' ? <PostImg source= {item.postImage}/> : <Divider />}
+      
       <InteractionWrapper>
         <Interaction active>
           <Ionicons name="heart" size={25} color="#2e64e5" />
@@ -58,4 +59,4 @@ const PostCard = ({item}) => {
 };
 export default PostCard;
 
-  
+  //<PostImg source= {require('../assets/posts/post-img-2.jpg')}/>

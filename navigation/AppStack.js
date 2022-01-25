@@ -13,14 +13,16 @@ import ChatScreen from '../screens/ChatScreen';
 import NewPostScreen from '../screens/NewPostScreen';
 import MessageScreen from '../screens/MessageScreen';
 import { windowHeight } from '../utils/Dimentions';
+import EditProfileScreen from '../screens/EditProfileScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+
 const MyFeed = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="RN Social"
+      name="Safespace"
       component={HomeScreen}
       options={{
         headerTitleAlign: 'center',
@@ -40,18 +42,34 @@ const MyFeed = () => (
 
 const MessageStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Message" component={MessageScreen} />
+    <Stack.Screen name="Message" component={MessageScreen} options={{
+        headerShown: false,
+      }}/>
     <Stack.Screen name="Chat" component={ChatScreen} />
   </Stack.Navigator>
 );
 
-const ProfileStack = () => (
+const ProfileStack = ({navigation}) => (
   <Stack.Navigator>
     <Stack.Screen
       name="Profil"
       component={ProfileScreen}
       options={{
         headerShown: false,
+      }}
+    />
+    <Stack.Screen
+      name="EditProfile"
+      component={EditProfileScreen}
+      options={{
+        headerTitle: 'Edit Profile',
+        headerBackTitleVisible: false,
+        headerTitleAlign: 'center',
+        headerStyle: {
+          backgroundColor: '#fff',
+          shadowColor: '#fff',
+          elevation: 0,
+        },
       }}
     />
   </Stack.Navigator>
@@ -86,18 +104,19 @@ function AppStack ()
     },
       tabBarShowLabel:false,
       tabBarStyle: { 
-        position: 'absolute',
-        //paddingVertica:10,
+        position: "absolute",
+        
+        paddingVertica:10,
         marginBottom:10,
         marginHorizontal:10,
         borderRadius:15, 
         backgroundColor:colors.surface,
         elevation:24,
-        height:windowHeight/9.5,
+        height:windowHeight/15,
       },
       tabBarActiveTintColor: colors.primary,
       tabBarInactiveTintColor: colors.on_surface,
-
+      tabBarHideOnKeyboard:true,
     })}
     >
       <Tab.Screen

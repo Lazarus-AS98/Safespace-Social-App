@@ -67,7 +67,7 @@ const LoginScreen = ({navigation}) => {
         marginBottom: 10,
         color:colors.primary
         }}>
-          AppName
+          Safespace
       </Text>
       
       <Surface 
